@@ -45,8 +45,7 @@ namespace PetHotel.Models
             reservations.Add(r2);
             reservations.Add(r3);
 
-
+            
         }
-
     }
 }

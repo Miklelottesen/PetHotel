@@ -47,7 +47,7 @@ namespace PetHotel.Models
             get; set;
         }
 
-        public Reservation(int ReservationID, String PetName, String Specie, DateTime StartDate, DateTime EndDate, Customer Customer)
+        public Reservation(int ReservationID, String Specie, String PetName, DateTime StartDate, DateTime EndDate, Customer Customer)
         {
             this.ReservationID = ReservationID;
             this.PetName = PetName;

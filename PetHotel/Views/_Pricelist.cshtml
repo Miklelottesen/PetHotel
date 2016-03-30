@@ -1,0 +1,18 @@
+﻿@using PetHotel.Models
+<section class="col-md-4">
+    <h2>Our prices</h2>
+    <table border="1">
+        <tr>
+            <td><b>Specie</b></td>
+            <td><b>Price</b></td>
+        </tr>
+        <!-- Generate rows:-->
+        @foreach (KeyValuePair<string, int> @dic in ViewBag.priceList)
+        {
+            <tr>
+                <td>@dic.Key.ToString()</td>
+            <td>@dic.Value</td>
+        </tr>
+        }
+    </table>
+</section>

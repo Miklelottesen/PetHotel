@@ -1,7 +1,26 @@
-﻿
+﻿@using PetHotel.Models
 @{
     ViewBag.Title = "Reservation";
 }
 
 <h2>Reservation</h2>
+<table border="1">
+    <tr><!-- Column names:-->
+        <td><b>Species</b></td>
+        <td><b>Name</b></td>
+        <td><b>Arrival</b></td>
+        <td><b>Owner</b></td>
+        <td><b>Phone</b></td>
+    </tr>
+    <!-- Dynamic rows:-->
+    @foreach(Reservation @res in ViewBag.Reservations){
+        <tr>
+            <td>@res.Specie</td>
+            <td>@res.PetName</td>
+            <td>@res.StartDate</td>
+            <td>@res.Customer.Firstname</td>
+            <td>@res.Customer.Phone</td>
+        </tr>
+    }
+</table>
 
